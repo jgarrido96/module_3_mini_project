@@ -1,16 +1,4 @@
 
-# Welcome to the Contact Management System!
-
-# Menu:
-# 1. Add a new contact
-# 2. Edit an existing contact
-# 3. Delete a contact
-# 4. Search for a contact
-# 5. Display all contacts
-# 6. Export contacts to a text file
-# 7. Quit
-
-
 contacts = {}
 def home_page():
     while True:
@@ -34,14 +22,12 @@ def home_page():
                     elif user_input == "6":
                         export_contacts()
                     elif user_input == "7":
-                        print("Now exiting... Thank you!")
+                        print("Now leaving the Jungle Management System...\nThank you!")
                         break
             else:
                 print("Invalid entry, please select something from the menu.")
         except Exception as e:
             print(f"An error occured: {e}")
-# {contacts["First name"]}:
-# def view_contact():
 
 
 def add_contact():
@@ -114,71 +100,8 @@ def export_contacts():
         for contact in contacts:
             file.write(f"Last name: {contacts[contact]["Last name"]}\nFirst name: {contacts[contact]["First name"]}\nEmail: {contacts[contact]["Email"]}\nPhone number: {contacts[contact]["Phone number"]}\nNotes: {contacts[contact]["Notes"]}\n\n")
     print("Your file has been created!")
+
+
 home_page()     
             
             
-            
-            
-
-
-
-
-
-
-
-
-
-
-# print(contacts)
-# print(contacts())
-
-address_book = {}
-
-def add_contact():
-    email = "ryanr@codingtemple.com" #input("please enter an email")
-    phone_number = "6308247768" #input("please enter an phone number")
-    full_name = "Ryan" #input("please enter an first_name")
-    
-
-    address_book[email] = {"email": email, "phone number": phone_number, "name": full_name}
-
-
-
-
-
-# # add_contact()
-
-# print(address_book)
-
-# print(address_book["ryanr@codingtemple.com"]['phone number'])
-# address_book["ryanr@codingtemple.com"]['phone number'] = "773202LUNA"
-# print(address_book["ryanr@codingtemple.com"]['phone number'])
-
-
-
-# print('\n')
-# service_tickets = {
-#     "Ticket001": {"Customer": "Alice", "Issue": "Login problem", "Status": "open"},
-#     "Ticket002": {"Customer": "Bob", "Issue": "Payment issue", "Status": "closed"}
-# }
-
-# def tickets():
-#     while True:
-#         user_input = input("\nWelcome! What would you like to do today?\nTo display tickets type 'display'.\nTo update the status of your ticket type 'update'.\nTo open a new ticket, type 'open'.\nTo quit type 'quit'. ")
-#         if user_input == 'quit':
-#             break
-#         elif user_input == 'display':
-#             for ticket in service_tickets:
-#                 print(f'{ticket}\t{service_tickets[ticket]["Customer"]}\t{service_tickets[ticket]["Status"]}\t{service_tickets[ticket]["Issue"]}')
-#         elif user_input == 'update':
-#             ticket_number = input("Please enter your ticket number: ")
-#             new_status = input("Enter new status: ")
-#             if ticket_number in service_tickets:
-#                 service_tickets[ticket_number]["Status"] = new_status
-#         elif user_input == 'open':
-#             name_input = input("Please provide your name: ")
-#             issue_input = input("What seems to be the issue? ")
-#             new_key = (f"Ticket00{str(len(service_tickets)+1)}")
-#             service_tickets[new_key] = {"Customer": name_input, "Issue": issue_input, "Status": "open"}
-
-# tickets()
